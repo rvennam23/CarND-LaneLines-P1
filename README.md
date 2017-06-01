@@ -10,16 +10,17 @@ When we drive, we use our eyes to decide where to go.  The lines on the road tha
 
 In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
 
-To complete the project, two files will be submitted: a file containing project code and a file containing a brief write up explaining your solution. We have included template files to be used both for the [code](https://github.com/udacity/CarND-LaneLines-P1/blob/master/P1.ipynb) and the [writeup](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md).The code file is called P1.ipynb and the writeup template is writeup_template.md 
 
-To meet specifications in the project, take a look at the requirements in the [project rubric](https://review.udacity.com/#!/rubrics/322/view)
-
-
-Creating a Great Writeup
+Project Writeup
 ---
-For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
+For this writeup, I will use solidWhiteRight.jpg image as input. This project consists of five steps.
 
-1. Describe the pipeline
+#1 GrayScale Conversion
+Input images(RGB format) are converted into grayscale images in this step. In grayscale representation, value of each pixel is a single sample, that is, it carries only intensity information. 
+Intensity of pixels would be used in later steps for edges detection. Below helper function docanes the grayscale conversion
+
+
+
 
 2. Identify any shortcomings
 
@@ -27,7 +28,6 @@ For this project, a great writeup should provide a detailed response to the "Ref
 
 We encourage using images in your writeup to demonstrate how your pipeline works.  
 
-All that said, please be concise!  We're not looking for you to write a book here: just a brief description.
 
 You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup. Here is a link to a [writeup template file](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). 
 
