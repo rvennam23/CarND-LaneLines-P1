@@ -13,7 +13,7 @@ In this project you will detect lane lines in images using Python and OpenCV.  O
 
 Project Writeup
 ---
-For this writeup, I will use solidWhiteRight.jpg image as input. This project consists of five steps.
+For this writeup, I will use solidWhiteRight.jpg image as input. This project consists of 4 steps.
 
 #1 GrayScale Conversion <br>
 Input images(RGB format) are converted into grayscale images in this step. In grayscale representation, value of each pixel is a single sample, that is, it carries only intensity information. 
@@ -24,6 +24,19 @@ Intensity of pixels would be used in later steps for edges detection.
 
 <u>GrayScaled image </u>
 <img src="examples/output_8_1.png" width="360" alt="Combined Image" />
+
+#2 Guassian blur smoothing & canny edge detection <br>
+Looking at above grayscale image, It can be seen that pixel intensity changes rapidly accross a egde or lane. This property will be used for lane detection in canny edge algorithm. First, to eliminate image noise and to smoothen edges, GaussianBlur function is applied on the image. then,Cannyedge detection to detect the lanes.
+
+cv2.Canny takes two threshold values which requires some explanation.
+According to the OpenCV documentation, the double thresholds are used as follows:
+
+    If a pixel gradient is higher than the upper threshold, the pixel is accepted as an edge
+    If a pixel gradient value is below the lower threshold, then it is rejected.
+    If the pixel gradient is between the two thresholds, then it will be accepted only if it is connected to a pixel that is above the upper threshold.
+    Canny recommended a upper:lower ratio between 2:1 and 3:1.
+
+These two threshold values are empirically determined. Basically, you will need to define them by trials and errors.
 
 
 
