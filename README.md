@@ -15,10 +15,15 @@ Project Writeup
 ---
 For this writeup, I will use solidWhiteRight.jpg image as input. This project consists of five steps.
 
-#1 GrayScale Conversion
+#1 GrayScale Conversion <br>
 Input images(RGB format) are converted into grayscale images in this step. In grayscale representation, value of each pixel is a single sample, that is, it carries only intensity information. 
-Intensity of pixels would be used in later steps for edges detection. Below helper function docanes the grayscale conversion
+Intensity of pixels would be used in later steps for edges detection. 
 
+<u>Input image</u>
+<img src="examples/output_7_2.png" width="240" alt="Combined Image" />
+
+<u>GrayScaled image </u>
+<img src="examples/output_8_1.png" width="240" alt="Combined Image" />
 
 
 
