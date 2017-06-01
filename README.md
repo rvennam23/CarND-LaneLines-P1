@@ -20,10 +20,10 @@ Input images(RGB format) are converted into grayscale images in this step. In gr
 Intensity of pixels would be used in later steps for edges detection. 
 
 <u>Input image</u>
-<img src="examples/output_7_2.png" width="240" alt="Combined Image" />
+<img src="examples/output_7_2.png" width="360" alt="Combined Image" />
 
 <u>GrayScaled image </u>
-<img src="examples/output_8_1.png" width="240" alt="Combined Image" />
+<img src="examples/output_8_1.png" width="360" alt="Combined Image" />
 
 
 
