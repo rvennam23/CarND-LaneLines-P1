@@ -13,59 +13,11 @@ In this project you will detect lane lines in images using Python and OpenCV.  O
 
 Project Writeup
 ---
-For this writeup, I will use solidWhiteRight.jpg image as input. This project consists of 4 steps.
 
-#1 GrayScale Conversion <br>
-Input images(RGB format) are converted into grayscale images in this step. In grayscale representation, value of each pixel is a single sample, that is, it carries only intensity information. 
-Intensity of pixels would be used in later steps for edges detection. 
-
-<u>Input image</u>
-<img src="examples/output_7_2.png" width="360" alt="Combined Image" />
-
-<u>GrayScaled image </u>
-<img src="examples/output_8_1.png" width="360" alt="Combined Image" />
-
-#2 Guassian blur smoothing & canny edge detection <br>
-Looking at above grayscale image, It can be seen that pixel intensity changes rapidly accross a egde or lane. This property will be used for lane detection in canny edge algorithm. First, to eliminate image noise and to smoothen edges, GaussianBlur function is applied on the image. then,Cannyedge detection to detect the lanes.
-
-cv2.Canny takes two threshold values which requires some explanation.
-According to the OpenCV documentation, the double thresholds are used as follows:
-
-    If a pixel gradient is higher than the upper threshold, the pixel is accepted as an edge
-    If a pixel gradient value is below the lower threshold, then it is rejected.
-    If the pixel gradient is between the two thresholds, then it will be accepted only if it is connected to a pixel that is above the upper threshold.
-    Canny recommended a upper:lower ratio between 2:1 and 3:1.
-
-These two threshold values are empirically determined. Basically, you will need to define them by trials and errors.
+project1writeup.pdf(available in top level directory) has detailed writeup covering algorithm implementation details and test results.It also includes possible improvements and shortcomings with algorithm chosen. 
 
 
-
-2. Identify any shortcomings
-
-3. Suggest possible improvements
-
-We encourage using images in your writeup to demonstrate how your pipeline works.  
+   
 
 
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup. Here is a link to a [writeup template file](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). 
-
-
-The Project
----
-
-## If you have already installed the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) you should be good to go!   If not, you should install the starter kit to get started on this project. ##
-
-**Step 1:** Set up the [CarND Term1 Starter Kit](https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/83ec35ee-1e02-48a5-bdb7-d244bd47c2dc/lessons/8c82408b-a217-4d09-b81d-1bda4c6380ef/concepts/4f1870e0-3849-43e4-b670-12e6f2d4b7a7) if you haven't already.
-
-**Step 2:** Open the code in a Jupyter Notebook
-
-You will complete the project code in a Jupyter notebook.  If you are unfamiliar with Jupyter Notebooks, check out <A HREF="https://www.packtpub.com/books/content/basics-jupyter-notebook-and-python" target="_blank">Cyrille Rossant's Basics of Jupyter Notebook and Python</A> to get started.
-
-Jupyter is an Ipython notebook where you can run blocks of code and see results interactively.  All the code for this project is contained in a Jupyter notebook. To start Jupyter in your browser, use terminal to navigate to your project directory and then run the following command at the terminal prompt (be sure you've activated your Python 3 carnd-term1 environment as described in the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) installation instructions!):
-
-`> jupyter notebook`
-
-A browser window will appear showing the contents of the current directory.  Click on the file called "P1.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to complete the project.  
-
-**Step 3:** Complete the project and submit both the Ipython notebook and the project writeup
 
